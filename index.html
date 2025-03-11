@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Griffy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+                
+
+<body id="structure">
+
+
+    <h1 id="gameName" class="mainlogo">street fighter</h1>
+    <i id="back" class="fa-solid fa-circle-arrow-left "></i> 
+    <i id="audioPlay" class="fa-solid fa-volume-high"></i>
+    <audio id="audio" autoplay>
+        <source src="./audio/audio.mp3" type="audio/mp3">
+    </audio>
+
+     
+    <div id="life1" class="life1"></div>
+    <i id="stop" onclick="stop()" class="fa-solid fa-equals fa-rotate-90"></i>
+    <div id="life2" class="life2"></div>
+    
+    <div id="continuefight" class="stopbox">
+        <button onclick="resumebuton()" id="resumebuton" >resume</button>
+        <pre class="movelist">
+  moveliset
+  
+punch : keyword "w"
+punch : keyword "w"
+punch : keyword "w"
+punch : keyword "w"
+punch : keyword "w"
+punch : keyword "w"
+        </pre>
+        <button id="reloadButton">back home page</button>
+        <button onclick="dones()">done</button>
+    </div>
+
+
+
+    <div class="container">
+
+        <button id="mystart" onclick="change()">start game</button><br>
+        <button id="mynew" onclick="newchanges()">new game</button><br>
+        <button id="myset" onclick="changeset()">setting</button>
+
+
+        <div id="showset" class="setting">
+
+
+            <h1>setting</h1>
+
+            <label for="audioRange">Select the Audio Volume:</label>
+            <input id="audioRange" type="range" min="0" max="1" step="0.01" value="0.5"><br>
+
+            <label for="user">user name:</label>
+            <input id="user" type="text" placeholder="type name">
+
+            <div class="line"></div>
+
+            <label for="difficulty"><h1 id="gap">difficulty</h1><h3 class="first">Easy, Medium or Hard</h3></label>
+            <input id="difficulty" type="text" placeholder="type difficulty"><br>
+
+            <button style="margin-bottom: 10px;" onclick="apply()">Apply it</button>
+
+
+        </div>
+
+
+        
+
+        <div id="selectplay" class="players">
+            <div id="player1img" class="player1img">
+               
+                <div id="player1" class="player-box">
+                   
+                </div>
+               
+                <img id="player1-image-left" class="player-image-left"  style="display: none;">
+            </div>
+        
+           <div id="between" class="vs">vs</div>
+        
+            <div id="player2img" class="player2">
+           
+                <div id="player2" class="player-box">
+                   
+                </div>
+             
+                <img id="player2-image-right" class="player-image-right"  style="display: none;">
+            </div>
+        
+            <h1 class="logo">select players</h1>
+            <p class="select1">ply 1: &nbsp;<span id="usersplay"></span></p>
+            <p class="select2">ply 2:&nbsp;<span id="aiplay"></span></p>
+        
+         
+            <div id="akuma" class="box box1" onclick="selectPlayer('Akuma')"></div>
+            <div id="ken" class="box box2" onclick="selectPlayer('Ken')"></div>
+            <div id="ryu" class="box box3" onclick="selectPlayer('Ryu')"></div>
+            <div id="roleno" class="box box4" onclick="selectPlayer('Roleno')"></div>
+            <div id="lucia" class="box box5" onclick="selectPlayer('Lucia')"></div>
+            <div id="terrybogard" class="box box6" onclick="selectPlayer('Terry Bogard')"></div>
+            <div id="joehigashi" class="box box7" onclick="selectPlayer('Joe Higashi')"></div>
+            <div id="luke" class="box box8" onclick="selectPlayer('Luke')"></div>
+            <div id="chunli" class="box box9" onclick="selectPlayer('Chun Li')"></div>
+            <div id="jp" class="box box10" onclick="selectPlayer('JP')"></div>
+
+            <button class="reset"  onclick="reset()">reset</button>
+            <button class="playing"  onclick="plays()">ready play</button>
+            
+        </div>
+        
+    <script src= "first.js">
+
+    </script>
+    <script src="sec.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

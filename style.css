@@ -1,0 +1,648 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    background: url(https://images5.alphacoders.com/130/1302520.jpg) rgba(0, 0, 0, 0.295);
+    width: auto;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+i {
+    color: white;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#back {
+    position: absolute;
+    left: 0;
+    width: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+    font-size: 30px; /* You can adjust the size if needed */
+    color: white;
+    cursor: pointer;
+}
+#back:hover {
+    position: absolute;
+    left: 0;
+    color: rgb(4, 0, 255);
+    margin-left: 10px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+    font-size: 30px; /* You can adjust the size if needed */
+    cursor: pointer;
+}
+
+.container {
+    width: 600px;
+    height: auto;
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 345px;
+    text-align: center;
+    align-content: center;
+}
+
+button {
+    font-size: 20px;
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 18px;
+    background:blue;
+    color: white;
+    border: none;
+    box-shadow: 0px 1px 10px white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(53, 38, 189);
+    box-shadow: 0px 1px 10px rgb(40, 38, 189);
+}
+
+.setting {
+    width: 500px;
+    transform: translateX(100%);
+    opacity: 0;
+    padding: 8px;
+    border: 1px solid;
+    background: rgba(95, 102, 129, 0.637);
+    margin: auto auto;
+    display: block;
+    border-radius: 30px;
+    transition: 2s transform, 2s;
+}
+#gap{
+    margin-bottom: -20px;
+}
+.setting.show {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.setting>h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    font-family: "Moon Dance", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.setting>label {
+    font-size: 25px;
+    font-family: "Moon Dance", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.line {
+    width: auto;
+    margin-bottom: 0;
+    border: 2px solid;
+    background-color: beige;
+    margin: 10px 0 -20px 0;
+    box-shadow: 0px 1px 10px white;
+}
+
+#audioRange {
+    -webkit-appearance: none;
+    width: 45%;
+    height: 15px;
+    border-radius: 5px;
+    background: #080be4;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#audioRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#audioRange::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(29, 8, 223);
+    cursor: pointer;
+}
+
+#difficulty {
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.first {
+    margin-bottom: 0px;
+}
+
+#user {
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+.players {
+width: 600px;
+height: 320px;
+position: absolute; 
+left: 50%;
+top: 50%;
+padding: 10px;
+transform: translate(-50%, -50%);  
+display: none;
+opacity: 0;
+transition: transform 2s ease, opacity 2s ease; 
+}
+
+.players.show {
+display: block;
+opacity: 1;
+transform: translate(-50%, -50%);
+}
+.logo{
+font-size: 40px;
+margin-top: 0;
+color: white;
+color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+    font-family: "Moon Dance", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+#usersplay{
+  color: white;
+}
+#aiplay{
+ color: white;
+}
+.box{
+width: 110px;
+height: 90px;
+display: inline-block;
+box-shadow: 0px 1px 10px rgb(133, 20, 226);
+}
+.select1{
+position: absolute;
+left: 0;
+top: 0;
+color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+margin-top: 30px;
+margin-left: 40px;
+font-size: 20px;
+}
+.select2{
+position: absolute;
+right: 0;
+top: 0;
+color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+margin-top: 30px;
+margin-right: 40px;
+font-size: 20px;
+}
+.box1{
+background-image: url(./audio/box1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box2{
+background-image: url(https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24026116/Ken_Artwork.jpg?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750
+);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box3{
+background-image: url(https://static.wikia.nocookie.net/sfv5782/images/b/b9/RyuQuotes.jpg/revision/latest?cb=20160303214552);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box4{
+background-image: url(https://media.eventhubs.com/images/2025/02/06_metro05.webp);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box5{
+background-image: url(https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/04/street-fighter-vi-cammy-white-1.jpg?q=50&fit=crop&w=825&dpr=1.5);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box6{
+background-image: url(https://cdn.dlcompare.com/others_jpg/upload/news/image/terry-bogard-is-ready-for-street-081e6c3b-image-441786c2b.jpg.webp);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box7{
+background-image: url(https://media.eventhubs.com/images/2021/02/10_higashi09.jpg );
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box8{
+background-image: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/04/street-fighter-6.jpg?q=50&fit=crop&w=825&dpr=1.5);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box9{
+background-image: url(https://www.siliconera.com/wp-content/uploads/2023/05/street-fighter-duel-athlete-chun-li-summer-yang.png?fit=1200%2C674);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+.box10{
+background-image: url(https://www.pcgamesn.com/wp-content/sites/pcgamesn/2023/05/street-fighter-6-review-jp.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+#player1-image-left {
+    position: absolute;
+    left: -450px; 
+    width: 400px;
+    height: 700px;
+    
+    margin-top: 300px;
+    object-fit: cover;
+}
+
+#player2-image-right {
+    position: absolute;
+    right: -450px; 
+    width: 400px;
+    height: 700px;
+    margin-top: 300px;
+    object-fit: cover;
+}
+#player1img, #player2img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#player1-image-left, #player2-image-right {
+    transition: all 0.3s ease; 
+}
+.reset{
+    font-size: 12px;
+    background:blue;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: white;
+    box-shadow: 0px 1px 10px white;
+}
+.playing{
+    margin-top: 20px;
+    font-size: 12px;
+    background:blue;
+    color: white;
+    box-shadow: 0px 1px 10px white;
+}
+#vs {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.vs{
+  display: none;
+  font-size: 200px;
+  position: absolute;
+  left: 35%;
+  color:orange ;
+  font-family: "Griffy", system-ui;
+  font-weight: 400;
+  text-shadow: 0px 1px 100px rgb(196, 80, 13);
+  font-style: normal;
+}
+.life1{
+    position: absolute;
+    width: 44%;
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 5px;
+    box-shadow: 0px 1px 10px rgb(192, 63, 12);
+    left: 3vw;
+    background-color: rgb(241, 192, 101);
+    top: 70px;
+    display: none;
+}
+.life2{
+    position: absolute;
+    width: 44%;
+    margin-left: 5px;
+    border-radius: 20px;
+    background-color: rgb(241, 192, 101);
+    height: 30px;
+    box-shadow: 0px 1px 10px rgb(192, 63, 12);
+    right:3vw;
+    top: 70px;
+    display: none;
+}
+#stop{
+    position: absolute;
+   left: 50%;
+   right: 50%;
+   top: 43px;
+   font-size: 35px;
+  display: none;
+}
+.stopbox {
+    width: 20%;
+    height: 280px;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    padding: 20px;
+    background: rgba(95, 102, 129, 0.637);
+    border: 2px solid white;
+   display: none;
+   z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stopbox>button{
+      font-size: 15px;
+      display: block;
+      margin: auto ;
+      margin-bottom: 10px;
+      
+}
+.movelist{
+    color: white;
+}
+
+.mainlogo{
+    color: rgb(241, 192, 101);
+    text-shadow: 0px 1px 10px rgb(192, 63, 12);
+    font-size: 40px;
+    position: absolute;
+    left: 44%;  
+    top: -2vh;
+    font-family: "Griffy", system-ui;
+    font-weight: 400;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 1280px  ) {
+    i {
+        color: white;
+        position: absolute;
+        right: 0%;
+        top: 0;
+        font-size: 20px;
+        margin-right: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .mainlogo{
+        color: rgb(241, 192, 101);
+        text-shadow: 0px 1px 10px rgb(192, 63, 12);
+        font-size: 40px;
+        position: absolute;
+        left: 41%;  
+        top: -2vh;
+        font-family: "Griffy", system-ui;
+        font-weight: 400;
+        display: none;
+    }
+    body {
+        padding: 0%;
+        margin: 0%;
+        background: url(https://images5.alphacoders.com/130/1302520.jpg) rgba(0, 0, 0, 0.199);
+        width: auto;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+    .players {
+        width: 450px;
+        height: 240px;    
+        border-radius: 10px;
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        padding: 10px;
+        transform: translate(-50%, -50%);  
+        display: none;
+        opacity: 0;
+        transition: transform 2s ease, opacity 2s ease; 
+        }
+        .box{
+            width: 80px;
+            height: 60px;
+            display: inline-block;
+            border: 1px solid;
+            }
+            button {
+                font-size: 15px;
+                padding-left: 35px;
+                font-weight: 500;
+                padding-right: 35px;
+                background:blue;
+                margin-bottom: -5px;
+                color: white;
+                border: none;
+                box-shadow: 0px 1px 10px white;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-radius: 20px;
+            }
+            .logo{
+                font-size: 30px;
+                margin-top: 0;
+                color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+               margin-bottom: 20px;
+                    font-family: "Moon Dance", serif;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+                #player1-image-left {
+                    position: absolute;
+                    left: -290px; 
+                    width: 300px;
+                    height: 530px;
+                    
+                    margin-top: 300px;
+                    object-fit: cover;
+                }
+                
+                #player2-image-right {
+                    position: absolute;
+                    right: -290px;  
+                    width: 300px;
+                    height: 530px;
+                    margin-top: 300px;
+                    object-fit: cover;
+                }
+                .setting {
+                    width: 400px;
+                    height: 380px;
+                    transform: translateX(100%);
+                    opacity: 0;
+                    padding: 8px;
+                    border: 1px solid;
+                    background: rgba(95, 102, 129, 0.637);
+                    margin: auto auto;
+                    display: block;
+                    border-radius: 30px;
+                    transition: 2s transform, 2s;
+                }
+                .setting>h1 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-size: 50px;
+                    font-family: "Moon Dance", serif;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+                
+                .setting>label {
+                    font-size: 25px;
+                    font-family: "Moon Dance", serif;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+                #audioRange {
+                    -webkit-appearance: none;
+                    width: 40%;
+                    height: 15px;
+                    border-radius: 5px;
+                    background: #240ab8;
+                    outline: none;
+                    opacity: 0.7;
+                    -webkit-transition: .2s;
+                    transition: opacity .2s;
+                }
+                
+                #audioRange::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background: rgb(255, 255, 255);
+                    cursor: pointer;
+                }
+                
+                #audioRange::-moz-range-thumb {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background: rgb(68, 7, 236);
+                    cursor: pointer;
+                }
+                #difficulty {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 8px;
+                }
+                #gap{
+                    margin-bottom: -20px;
+                }
+                .select1{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+                    margin-top: 25px;
+                    margin-left: 30px;
+                    font-size: 18px;
+                    }
+                    .select2{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    color: rgb(255, 255, 255);
+text-shadow: 0px 1px 10px rgb(37, 39, 170);
+                    margin-top: 25px;
+                    margin-right: 30px;
+                    font-size: 18px;
+                    }
+                    #back {
+                        position: absolute;
+                        left: 0;
+                        margin-left: 12px;
+                        margin-top: 10px;
+                        display: none; /* Initially hidden */
+                        font-size: 20px; /* You can adjust the size if needed */
+                        color: white;
+                        cursor: pointer;
+                    }
+                    #back:hover {
+                        position: absolute;
+                        left: 0;
+                        color: rgb(0, 17, 255);
+                        margin-left: 8px;
+                        margin-top: 8px;
+                        display: none; /* Initially hidden */
+                        font-size: 15px; /* You can adjust the size if needed */
+                        cursor: pointer;
+                    }
+               
+                
+ }
